@@ -1,0 +1,8 @@
+//Target the toggle button
+let toggleButton = document.getElementById('toggle-button');
+let toggleList = document.getElementById('header__button__ul--toggle-list');
+
+//Toggle the button to show the list
+toggleButton.addEventListener('click', () => {
+    console.log('yeah')
+})

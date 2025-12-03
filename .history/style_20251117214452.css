@@ -1,0 +1,21 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+:root {
+    --primary-color: #0d1b2a;
+    --secondary-color: #e0e1dd;
+}
+
+body {
+    align-content: space-evenly;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}

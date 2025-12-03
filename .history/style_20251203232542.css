@@ -1,0 +1,151 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+:root {
+    --primary-color: #0A0908;
+    --secondary-color: #C6AC8F;
+    --light-primary: #EAE0D5;
+    --light-secondary: #5E503F;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+.icons {
+    background-color: var(--primary-color);
+    font-size: 1.5rem;
+    border: none;
+}
+
+.icons i {
+    color: var(--secondary-color);
+}
+
+.header__button__ul--toggle-list {
+    background-color: pink;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 2s ease-in-out;
+}
+
+.header__button__ul--toggle-list.show {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+    animation: slideIn 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideIn {
+    from {
+        background-color: pink;
+    }
+
+    to {
+        background-color: green;
+    }
+
+}
+
+.header__div__ul--header {
+    display: flex;
+    justify-content: space-between;
+    background-color: yellow;
+    padding: 0.5rem 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 1.5rem;
+    gap: 5rem;
+    background-color: skyblue;
+}
+
+.li__div--content {
+    text-justify: inter-word;
+    background-color: orange;
+    width: 100%;
+    max-width: 40%;
+}
+
+main {
+    text-align: center;
+}
+
+main p {
+    font-size: 7rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+.main__div--buttons {
+    display: flex;
+    justify-content: center;
+    column-gap: 5rem;
+}
+
+.selection-button {
+    font-size: 2rem;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    border-style: solid;
+    border-width: 0.2rem;
+
+}
+
+.selection-button i {
+    padding: 0.2rem;
+}
+
+/* The settings style */
+.header__div--adjuster {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    column-gap: 5rem;
+    background-color: blue;
+    padding: 0.5rem 0;
+}
+
+.main__div--slider {
+    background-color: aqua;
+    margin-bottom: 50%;
+}
+
+.light-or-dark-mode {
+    background-color: maroon;
+}
+
+.light-or-dark-mode header {
+    background-color: green;
+}
+
+footer {
+    text-align: center;
+    color: var(--secondary-color);
+}

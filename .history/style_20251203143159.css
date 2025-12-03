@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+:root {
+    --primary-color: #0d1b2a;
+    --secondary-color: #e0e1dd;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: red;
+}
+
+.header__button__ul--toggle-list {
+    background-color: pink;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 2s ease-in-out;
+}
+
+.header__button__ul--toggle-list.show {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+    animation: slideIn 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideIn {
+    from {
+        background-color: pink;
+    }
+
+    to {
+        background-color: green;
+    }
+
+}
+
+.header__div__ul--header {
+    display: flex;
+    justify-content: space-between;
+    background-color: yellow;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 1.5rem;
+    gap: 5rem;
+    background-color: skyblue;
+}
+
+.li__div--content {
+    text-justify: inter-word;
+    background-color: orange;
+    width: 100%;
+    max-width: 40%;
+}
+
+main {
+    text-align: center;
+    background-color: blue;
+}
+
+/* The settings style */
+.header__div--adjuster {
+    display: block;
+    text-align: center;
+    background-color: blue;
+}
+
+footer {
+    text-align: center;
+    background-color: green;
+}
