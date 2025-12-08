@@ -17,28 +17,28 @@
 </head>
 
 <body>
-    <header>
+    <header class="settings-header">
         <div class="header__div--adjuster">
             <a href="index.html"><button><i class="ri-arrow-left-line"></i></button></a>
             <h3>Button Size Adjuster</h3>
-            <button id="display-mode">Light/dark</button>
+            <button id="display-mode"><i class="ri-contrast-2-line"></i></button>
         </div>
     </header>
 
     <main>
         <div class="main__div--slider">
-            <h3>Slide the slider below to adjust the button size</h3>
-            <div>
+            <h5>Slide the slider below to adjust the button size</h5>
+            <div class="main__div--input">
                 <input type="range" min="10" max="100" value="50" id="font-size-slider">
             </div>
-            <div>
+            <div class="main__div--increment">
                 <button id="text-content">
                     <i class="ri-add-large-line"></i>
                 </button>
             </div>
-            <div>
-                <button>Reset</button>
-                <button>Save</button>
+            <div class="main__div--resetNsave">
+                <button class="reset">Reset</button>
+                <button class="save">Save</button>
             </div>
         </div>
     </main>

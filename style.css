@@ -19,6 +19,7 @@ body {
     height: 100vh;
     max-width: 100vw;
     justify-content: space-between;
+    overflow: hidden;
     background-color: var(--primary-color);
 }
 
@@ -39,7 +40,6 @@ header {
 }
 
 .header__button__ul--toggle-list {
-    background-color: pink;
     position: fixed;
     top: 0;
     right: 0;
@@ -62,11 +62,11 @@ header {
 
 @keyframes slideIn {
     from {
-        background-color: pink;
+        background-color: var(--light-secondary);
     }
 
     to {
-        background-color: green;
+        background-color: var(--primary-color);
     }
 
 }
@@ -74,22 +74,41 @@ header {
 .header__div__ul--header {
     display: flex;
     justify-content: space-between;
-    background-color: yellow;
+    align-items: center;
+    color: var(--secondary-color);
+    background-color: rgba(87, 85, 85, 0.8);
     padding: 0.5rem 0;
 }
 
-li {
-    display: flex;
-    justify-content: space-between;
-    margin: 1rem 1.5rem;
-    gap: 5rem;
-    background-color: skyblue;
+.header__div__ul--header button {
+    background: none;
+    border: none;
 }
 
-.li__div--content {
-    text-justify: inter-word;
-    background-color: orange;
-    max-width: 100%;
+.header__div__ul--header button i {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+}
+
+li {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 1rem;
+    color: var(--secondary-color);
+}
+
+.li__div--content p {
+    font-size: 0.7rem;
+}
+
+.header__button__ul--toggle-list ul button {
+    background: none;
+    border: none;
+    justify-self: end;
+}
+
+.header__button__ul--toggle-list ul button i {
+    color: var(--secondary-color);
 }
 
 main {
@@ -124,18 +143,87 @@ main p {
 }
 
 /* The settings style */
+.settings-header {
+    background-color: rgba(87, 85, 85, 0.8);
+
+}
+
 .header__div--adjuster {
     display: flex;
-    width: 100%;
-    max-width: 100%;
-    column-gap: 5rem;
-    background-color: blue;
+    justify-content: space-between;
+    width: 100vw;
+    max-width: 100vw;
+    align-items: center;
+    color: var(--secondary-color);
     padding: 0.5rem 0;
 }
 
+.header__div--adjuster button {
+    background: none;
+    border: none;
+}
+
+.header__div--adjuster button i {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
 .main__div--slider {
-    background-color: aqua;
-    margin-bottom: 50%;
+    margin-bottom: 40%;
+    color: var(--secondary-color);
+}
+
+.main__div--input {
+    margin-top: 20%;
+}
+
+.main__div--input input {
+    width: 80%;
+}
+
+.main__div--input input[type="range"] {
+    background: red;
+    appearance: none;
+}
+
+.main__div--input input[type="range"]::-webkit-slider-runnable-track {
+    background: yellow;
+}
+
+.main__div--increment {
+    margin-top: 20%;
+}
+
+.main__div--increment button {
+    font-size: 2rem;
+    border-color: var(--secondary-color);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border-color: var(--secondary-color);
+    background: none;
+    border-width: 3px;
+    border-style: solid;
+}
+
+.main__div--increment button i {
+    color: var(--secondary-color);
+}
+
+.main__div--resetNsave {
+    margin-top: 20%;
+    display: flex;
+    justify-content: center;
+    column-gap: 3rem;
+}
+
+.main__div--resetNsave .reset,
+.save {
+    padding: 0.4rem;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: var(--secondary-color);
 }
 
 .light-or-dark-mode {
