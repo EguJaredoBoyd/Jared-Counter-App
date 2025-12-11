@@ -89,6 +89,10 @@ body.light-or-dark-mode .header__button__ul--toggle-list {
     border: none;
 }
 
+.header__div__ul--header button a {
+    text-decoration: none;
+}
+
 .header__div__ul--header button i {
     color: var(--secondary-color);
     font-size: 1.5rem;
