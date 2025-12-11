@@ -188,6 +188,10 @@ body.light-or-dark-mode .selection-button {
     color: var(--secondary-color);
 }
 
+body.light-or-dark-mode .header__div--adjuster button .ri-contrast-2-line {
+    color: var(--light-background);
+}
+
 .main__div--slider {
     margin-bottom: 40%;
     color: var(--secondary-color);
