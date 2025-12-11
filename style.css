@@ -11,6 +11,10 @@
     --secondary-color: #C6AC8F;
     --light-primary: #EAE0D5;
     --light-secondary: #5E503F;
+
+    /* background-color toggle */
+    --light-background: var(--light-primary);
+    --text-color: var(--light-secondary)
 }
 
 body {
@@ -23,6 +27,10 @@ body {
     background-color: var(--primary-color);
 }
 
+body.light-or-dark-mode {
+    background-color: var(--light-background);
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -30,7 +38,7 @@ header {
 }
 
 .icons {
-    background-color: var(--primary-color);
+    background: none;
     font-size: 1.5rem;
     border: none;
 }
@@ -39,8 +47,13 @@ header {
     color: var(--secondary-color);
 }
 
+body.light-or-dark-mode .icons i {
+    color: var(--text-color);
+}
+
 .header__button__ul--toggle-list {
     position: fixed;
+    background-color: var(--primary-color);
     top: 0;
     right: 0;
     width: 100vw;
@@ -56,19 +69,10 @@ header {
     transform: translateX(0);
     opacity: 1;
     pointer-events: auto;
-    animation: slideIn 3s;
-    animation-fill-mode: forwards;
 }
 
-@keyframes slideIn {
-    from {
-        background-color: var(--light-secondary);
-    }
-
-    to {
-        background-color: var(--primary-color);
-    }
-
+body.light-or-dark-mode .header__button__ul--toggle-list {
+    background-color: var(--light-background);
 }
 
 .header__div__ul--header {
@@ -76,7 +80,7 @@ header {
     justify-content: space-between;
     align-items: center;
     color: var(--secondary-color);
-    background-color: rgba(87, 85, 85, 0.8);
+    background-color: rgb(87, 85, 85);
     padding: 0.5rem 0;
 }
 
@@ -97,6 +101,10 @@ li {
     color: var(--secondary-color);
 }
 
+body.light-or-dark-mode li {
+    color: var(--text-color);
+}
+
 .li__div--content p {
     font-size: 0.7rem;
 }
@@ -111,6 +119,10 @@ li {
     color: var(--secondary-color);
 }
 
+body.light-or-dark-mode .header__button__ul--toggle-list ul button i {
+    color: var(--text-color);
+}
+
 main {
     text-align: center;
 }
@@ -119,6 +131,10 @@ main p {
     font-size: 7rem;
     font-weight: 500;
     color: var(--secondary-color);
+}
+
+body.light-or-dark-mode main p {
+    color: var(--text-color);
 }
 
 .main__div--buttons {
@@ -138,14 +154,18 @@ main p {
 
 }
 
+body.light-or-dark-mode .selection-button {
+    background-color: var(--light-background);
+    color: var(--text-color);
+}
+
 .selection-button i {
     padding: 0.2rem;
 }
 
 /* The settings style */
 .settings-header {
-    background-color: rgba(87, 85, 85, 0.8);
-
+    background-color: rgb(87, 85, 85);
 }
 
 .header__div--adjuster {
@@ -173,6 +193,10 @@ main p {
     color: var(--secondary-color);
 }
 
+body.light-or-dark-mode .main__div--slider {
+    color: var(--text-color);
+}
+
 .main__div--input {
     margin-top: 20%;
 }
@@ -185,7 +209,11 @@ main p {
     width: 80%;
 }
 
-.main__div--input input[type="range"]::-webkit-slider-runnable-track {}
+body.light-or-dark-mode .main__div--input input[type="range"] {
+    background-color: var(--text-color);
+}
+
+body.light .main__div--input input[type="range"]::-webkit-slider-runnable-track {}
 
 .main__div--input[type="range"]::-moz-range-track {}
 
@@ -197,6 +225,10 @@ main p {
     border-radius: 50%;
     background-color: var(--secondary-color);
     cursor: pointer;
+}
+
+body.light-or-dark-mode .main__div--input input[type="range"]::-webkit-slider-thumb {
+    background-color: var(--text-color);
 }
 
 
@@ -221,6 +253,10 @@ main p {
     color: var(--secondary-color);
 }
 
+body.light-or-dark-mode .main__div--increment button i {
+    color: var(--text-color);
+}
+
 .main__div--resetNsave {
     margin-top: 20%;
     display: flex;
@@ -237,16 +273,17 @@ main p {
     background-color: var(--secondary-color);
 }
 
-.light-or-dark-mode {
-    background-color: maroon;
-}
-
-.light-or-dark-mode header {
-    background-color: green;
+body.light-or-dark-mode .main__div--resetNsave .reset,
+body.light-or-dark-mode .main__div--resetNsave .save {
+    background-color: var(--text-color);
 }
 
 footer h6 {
     text-align: center;
     color: var(--secondary-color);
-    font-weight: 100;
+    font-weight: 500;
+}
+
+body.light-or-dark-mode footer h6 {
+    color: var(--text-color);
 }
