@@ -81,7 +81,7 @@ body.light-or-dark-mode .header__button__ul--toggle-list {
     align-items: center;
     color: var(--secondary-color);
     background-color: rgb(87, 85, 85);
-    padding: 0.5rem 0;
+    padding: 0.8rem 0;
 }
 
 .header__div__ul--header button {
