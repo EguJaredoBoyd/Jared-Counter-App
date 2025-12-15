@@ -63,6 +63,7 @@ body.light-or-dark-mode .icons i {
     opacity: 0;
     pointer-events: none;
     transition: all 2s ease-in-out;
+    z-index: 999;
 }
 
 .header__button__ul--toggle-list.show {
@@ -125,6 +126,10 @@ body.light-or-dark-mode li {
 
 body.light-or-dark-mode .header__button__ul--toggle-list ul button i {
     color: var(--text-color);
+}
+
+header button a {
+    text-decoration: none;
 }
 
 main {
@@ -284,6 +289,70 @@ body.light-or-dark-mode .main__div--increment button i {
 body.light-or-dark-mode .main__div--resetNsave .reset,
 body.light-or-dark-mode .main__div--resetNsave .save {
     background-color: var(--text-color);
+}
+
+/* Save-counter styles */
+#save-counter-body header button {
+    background-color: var(--light-secondary);
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+}
+
+#save-counter-body.light-or-dark-mode header button {
+    background-color: var(--secondary-color);
+}
+
+#save-counter-body header button a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+#save-counter-body.light-or-dark-mode header button a {
+    color: var(--primary-color);
+}
+
+.main__div--save {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    row-gap: 1rem;
+    color: var(--secondary-color);
+}
+
+.main__div--save div label {
+    font-size: 2rem;
+}
+
+.main__div--div-input {
+    display: flex;
+    column-gap: 1rem;
+}
+
+.main__div--div-input input[type="text"] {
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.main__div--div-input button {
+    background-color: var(--light-secondary);
+    color: var(--secondary-color);
+    font-size: 1rem;
+}
+
+body.light-or-dark-mode .main__div--div-input button {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+.main__div--div-input input,
+.main__div--div-input button {
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
 }
 
 footer h6 {

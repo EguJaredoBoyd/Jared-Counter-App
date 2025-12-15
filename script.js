@@ -4,7 +4,7 @@ let numberCount = Number(localStorage.getItem('increment')) || 0;
 //Get last button clicked once the browser loads
 let savedColor = localStorage.getItem('color');
 let savedColor2 = localStorage.getItem('color2');
-let savedColor3 = localStorage.getItem('color3')
+let savedColor3 = localStorage.getItem('color3');
 
 let numberIncrement = document.querySelector('#increment');
 let numberDecrement = document.getElementById('decrement');
