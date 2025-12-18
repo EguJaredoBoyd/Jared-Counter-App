@@ -14,6 +14,7 @@
     <script src="script.js" defer></script>
     <script src="toggle-script.js" defer></script>
     <script src="settings.js" defer></script>
+    <script src="history.js" defer></script>
 </head>
 
 <body>
@@ -27,35 +28,7 @@
                     <a href="settings.html"><i class="ri-settings-line"></i></i></a>
                 </button>
             </div>
-            <ul>
-                <li>
-                    <h3>10</h3>
-                    <div class="li__div--content">
-                        <h5>Students are late</h5>
-                        <p>
-                            10/05/2025
-                        <p>
-                    </div>
-                    <button><i class="ri-delete-bin-7-line"></i></button>
-                </li>
-                <li>
-                    <h3>30</h3>
-                    <div class="li__div--content">
-                        <h5>Teacher Available This Month</h5>
-                        <p>15/06/2025</p>
-                    </div>
-                    <button><i class="ri-delete-bin-7-line"></i></button>
-                </li>
-                <li>
-                    <h3>45</h3>
-                    <div class="li__div--content">
-                        <h5>Chairs In Class B and class C</h5>
-                        <p>30/06/2025
-                        <p>
-                    </div>
-                    <button><i class="ri-delete-bin-7-line"></i></button>
-                </li>
-            </ul>
+            <ul id="history-list"></ul>
         </div>
         <button id="reset" class="icons"><i class="ri-refresh-line"></i></button>
         <button class="icons"><a href="save-counter.html"><i class="ri-save-line"></i></a></button>
